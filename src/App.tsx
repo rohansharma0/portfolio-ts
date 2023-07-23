@@ -34,13 +34,18 @@ const App = () => {
     //     }
     // }, [timer]);
 
-    // theme state
-    const [theme, setTheme] = useState(Theme.Dark);
+
+    // Theme
+    const [theme, setTheme] = useState("");
+    // Check if theme is stored in local storage
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme");
+        setTheme(savedTheme ?? Theme.Dark);
+    }, []);
 
     const getTheme = () => {
         return theme === Theme.Dark ? Properties.darkTheme : Properties.lightTheme;
     }
-
     const themeMemo = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
     return (

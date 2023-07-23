@@ -33,6 +33,9 @@ export const StyledNavBar = styled.div`
 		.logo-container {
 			left: 2.5rem;
 		}
+		.hero-nav {
+			right: 7.5rem;
+		}
 	}
 
 	@media only screen and (min-width: 1200px) {

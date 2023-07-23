@@ -7,8 +7,12 @@ const ThemeSwitch = () => {
     const handleSwitch = () => {
         if (themeContext.theme === Theme.Dark) {
             themeContext.setTheme(Theme.Light)
+            // Saving theme to local storage
+            localStorage.setItem('theme', Theme.Light);
         } else {
             themeContext.setTheme(Theme.Dark)
+            // Saving theme to local storage
+            localStorage.setItem('theme', Theme.Dark);
         }
     }
     const themeContext = useContext(ThemeContext);

@@ -1,10 +1,13 @@
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import React, { useEffect, useRef, useContext, useState, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 import fbLogo from "../static/img/facebook.svg";
 import lnLogo from "../static/img/linkedin.svg";
 import inLogo from "../static/img/instagram.svg";
+import fbColorLogo from "../static/img/facebook-color.png";
+import lnColorLogo from "../static/img/linkedin-color.png";
+import inColorLogo from "../static/img/instagram-color.png";
 
 import gsap from "gsap";
 
@@ -16,6 +19,9 @@ import {
     staggerReaveal,
     staggerText,
 } from "../helper/Animations";
+
+import { ThemeContext } from "../providers/ThemeContext";
+import { Theme } from "../models/Theme";
 
 const MenuPage = ({ isActive }) => {
     //link change using url params
@@ -131,6 +137,8 @@ const MenuPage = ({ isActive }) => {
     //     });
     // }, []);
 
+    const themeContext = useContext(ThemeContext);
+
     return (
         <StyledMenuPage ref={(el) => (menu = el)}>
             <div
@@ -183,7 +191,7 @@ const MenuPage = ({ isActive }) => {
                         {width >= 1200 ? (
                             <p className="rolling-text">instagram</p>
                         ) : (
-                            <img src={inLogo} />
+                            <img src={themeContext.theme === Theme.Light ? inColorLogo : inLogo} />
                         )}
                     </a>
                     <a
@@ -194,7 +202,7 @@ const MenuPage = ({ isActive }) => {
                         {width >= 1200 ? (
                             <p className="rolling-text">linkedin</p>
                         ) : (
-                            <img src={lnLogo} />
+                            <img src={themeContext.theme === Theme.Light ? lnColorLogo : lnLogo} />
                         )}
                     </a>
                     <a
@@ -205,7 +213,7 @@ const MenuPage = ({ isActive }) => {
                         {width >= 1200 ? (
                             <p className="rolling-text">facebook</p>
                         ) : (
-                            <img src={fbLogo} />
+                            <img src={themeContext.theme === Theme.Light ? fbColorLogo : fbLogo} />
                         )}
                     </a>
                 </div>
