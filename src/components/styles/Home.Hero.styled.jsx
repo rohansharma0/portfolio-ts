@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 //background images
-// import circleRight from "../../static/img/circle-right.svg";
-// import circleLeft from "../../static/img/circle-left.svg";
-// import line from "../../static/img/line.svg";
+import circleRight from "../../static/img/circle-right.svg";
+import circleLeft from "../../static/img/circle-left.svg";
+import line from "../../static/img/line.svg";
 
 export const StyledHomeHero = styled.div`
 	height: 100vh;

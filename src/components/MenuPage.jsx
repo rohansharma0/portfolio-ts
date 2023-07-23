@@ -1,13 +1,5 @@
 import React, { useEffect, useRef, useContext, useState, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "./Logo";
-
-import fbLogo from "../static/img/facebook.svg";
-import lnLogo from "../static/img/linkedin.svg";
-import inLogo from "../static/img/instagram.svg";
-import fbColorLogo from "../static/img/facebook-color.png";
-import lnColorLogo from "../static/img/linkedin-color.png";
-import inColorLogo from "../static/img/instagram-color.png";
 
 import gsap from "gsap";
 
@@ -118,12 +110,12 @@ const MenuPage = ({ isActive }) => {
     //         el.innerHTML = "";
 
     //         let textContainer = document.createElement("div");
-    //         textContainer.classNameList.add("block");
+    //         textContainer.classNameList?.add("block");
 
     //         for (let letter of innerText) {
     //             let span = document.createElement("span");
     //             span.innerHTML = letter.trim() === "" ? "\xa0" : letter;
-    //             span.classNameList.add("letter");
+    //             span.classNameList?.add("letter");
     //             textContainer.appendChild(span);
     //         }
     //         el.appendChild(textContainer);
@@ -188,33 +180,21 @@ const MenuPage = ({ isActive }) => {
                         target="_blank"
                         className="clickableLinkShrink"
                     >
-                        {width >= 1200 ? (
-                            <p className="rolling-text">instagram</p>
-                        ) : (
-                            <img src={themeContext.theme === Theme.Light ? inColorLogo : inLogo} />
-                        )}
+                        <p className="rolling-text">instagram</p>
                     </a>
                     <a
                         href="https://www.linkedin.com/in/rohan-sharma-bb34b1188"
                         target="_blank"
                         className="clickableLinkShrink"
                     >
-                        {width >= 1200 ? (
-                            <p className="rolling-text">linkedin</p>
-                        ) : (
-                            <img src={themeContext.theme === Theme.Light ? lnColorLogo : lnLogo} />
-                        )}
+                        <p className="rolling-text">linkedin</p>
                     </a>
                     <a
                         href="https://www.facebook.com/rohan.sharma.9903"
                         target="_blank"
                         className="clickableLinkShrink"
                     >
-                        {width >= 1200 ? (
-                            <p className="rolling-text">facebook</p>
-                        ) : (
-                            <img src={themeContext.theme === Theme.Light ? fbColorLogo : fbLogo} />
-                        )}
+                        <p className="rolling-text">facebook</p>
                     </a>
                 </div>
                 <div className="copyright showHide">

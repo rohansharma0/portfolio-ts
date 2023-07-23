@@ -30,22 +30,25 @@ export const StyledMenuPage = styled.div`
 	.footer {
 		position: absolute;
 		bottom: 0;
-		width: 100%;
+		left: 0;
+		right: 0;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		align-items: center;
-		padding: 0 1.5rem;
+		align-items: flex-end;
+		padding: 0 1.5rem 2rem 1.5rem;
 		height: 15vh;
+
 		.footer-links {
+			align-items: flex-start;
 			display: flex;
-			align-items: center;
+			flex-direction: column;
 
 			a {
 
 				align-items: center;
 				display: flex;
-				margin: 0 1rem 0 0;
+				margin: 0.5rem 0 0 0;
 
 				.rolling-text {
 					font-size: 1rem;
@@ -197,7 +200,16 @@ export const StyledMenuPage = styled.div`
 	@media only screen and (min-width: 600px) {
 		.footer {
 			padding: 0 2.5rem;
+			align-items: center;
+			.footer-links{
+				flex-direction: row;
+				a{
+					margin: 0 1rem 0 0;
+				}
+			}
 		}
+
+
 	}
 
 	/* Large devices (laptops/desktops, 950px and up) */
