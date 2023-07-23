@@ -1,8 +1,5 @@
-import { useEffect, useRef, useState } from 'react'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import { useEffect, useMemo, useState } from 'react'
+import { RouterProvider } from 'react-router-dom'
 import Background from './pages/Background';
 import GlobalStyles from './components/styles/Global';
 import { LoadingPage } from './pages/LoadingPage';
@@ -12,50 +9,54 @@ import { Routes } from './Routes';
 
 import { Properties } from "./helper/Constants";
 import { ThemeContext } from './providers/ThemeContext';
+import { Theme } from './models/Theme';
 
 
 const App = () => {
-    const [preloader, setPreloader] = useState(true);
-    const [timer, setTimer] = useState(1);
-    const id: any = useRef(null);
+    // const [preloader, setPreloader] = useState(true);
+    // const [timer, setTimer] = useState(1);
+    // const id: any = useRef(null);
 
-    const clear = () => {
-        window.clearInterval(id.current);
-        setPreloader(false);
-    };
+    // const clear = () => {
+    //     window.clearInterval(id.current);
+    //     setPreloader(false);
+    // };
 
-    useEffect(() => {
-        id.current = window.setInterval(() => {
-            setTimer(timer - 1);
-        }, 500);
-    });
+    // useEffect(() => {
+    //     id.current = window.setInterval(() => {
+    //         setTimer(timer - 1);
+    //     }, 500);
+    // });
 
-    useEffect(() => {
-        if (timer === 0) {
-            clear();
-        }
-    }, [timer]);
+    // useEffect(() => {
+    //     if (timer === 0) {
+    //         clear();
+    //     }
+    // }, [timer]);
 
-    //theme state
-    const [theme, setTheme] = useState("darkTheme")
+    // theme state
+    const [theme, setTheme] = useState(Theme.Dark);
 
     const getTheme = () => {
-        return theme === "darkTheme" ? Properties.darkTheme : Properties.lightTheme;
+        return theme === Theme.Dark ? Properties.darkTheme : Properties.lightTheme;
     }
 
+    const themeMemo = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
+
     return (
-        <ThemeContext.Provider value={{ theme, setTheme }}>
+        <ThemeContext.Provider value={themeMemo}>
             <ThemeProvider theme={getTheme}>
                 <GlobalStyles />
                 <Background />
-                {preloader ? (
-                    <LoadingPage />
-                ) : (
-                    <>
-                        <NavBar />
-                        <RouterProvider router={Routes} />
-                    </>
-                )}
+                <>
+                    <NavBar />
+                    <RouterProvider router={Routes} />
+                </>
+                {/* {preloader ? (
+                <LoadingPage />
+            ) : (
+                
+            )} */}
             </ThemeProvider>
         </ThemeContext.Provider>
 

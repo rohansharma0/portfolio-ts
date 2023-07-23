@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     a{
-        color:${props => props.theme.textColor};
+        color : ${props => props.theme.textColor};
         text-decoration: none;
         width: fit-content;
         display: block;

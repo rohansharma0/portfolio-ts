@@ -15,7 +15,7 @@ export const StyledMenuPage = styled.div`
 	}
 
 	.menu-secondary-bg-color {
-		background-color: #fff;
+		background-color: ${props => props.theme.menuSecondaryColor};
 		top: 0;
 		bottom: 0;
 		left: 0;
@@ -42,6 +42,7 @@ export const StyledMenuPage = styled.div`
 			align-items: center;
 
 			a {
+
 				align-items: center;
 				display: flex;
 				margin: 0 1rem 0 0;
@@ -49,7 +50,7 @@ export const StyledMenuPage = styled.div`
 				.rolling-text {
 					font-size: 1rem;
 					letter-spacing: 0.5px;
-					color: #fff;
+					color: ${props => props.theme.textColor};
 					margin: 0.25rem 0;
 					margin-right: 1rem;
 					overflow: hidden;
@@ -116,10 +117,10 @@ export const StyledMenuPage = styled.div`
 			letter-spacing: 0.5px;
 			height: 1rem
 			p {
-				color: #fff;
+				color: ${props => props.theme.textColor};
 				margin: 0.25rem 0;
 				span {
-					color: #fff;
+					color: ${props => props.theme.textColor};
 					font-size: 80%;
 				}
 			}
@@ -127,7 +128,7 @@ export const StyledMenuPage = styled.div`
 	}
 	.container {
 		position: relative;
-		background-color: #000;
+		background-color: ${props => props.theme.menuPrimaryColor};
 		height: 100%;
 		width: 100%;
 		display: flex;
@@ -156,6 +157,7 @@ export const StyledMenuPage = styled.div`
 
 					margin: 1rem 0;
 					a {
+
 						text-decoration: none;
 						display: block;
 
@@ -169,8 +171,8 @@ export const StyledMenuPage = styled.div`
 							text-transform: uppercase;
 							letter-spacing: 8px;
 							-webkit-text-stroke-width: 1px;
-							-webkit-text-stroke-color: #fff;
-							color: #000;
+							-webkit-text-stroke-color: ${props => props.theme.textColor};
+							color: ${props => props.theme.secondaryColor};
 
 							&::before {
 								content: attr(data-text);
@@ -180,7 +182,7 @@ export const StyledMenuPage = styled.div`
 								left: 0;
 								top: 50%;
 								z-index: 2;
-								color: #fff;
+								color: ${props => props.theme.textColor};
 								transform: translateY(-50%);
 								transition: 1s
 									cubic-bezier(0.225, 1, 0.316, 0.99);

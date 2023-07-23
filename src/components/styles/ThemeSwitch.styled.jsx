@@ -6,47 +6,44 @@ export const StyledThemeSwitch = styled.div`
     height: 1.5rem;
     position: relative;
     cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 
-    .moon.icon {
-        color: #000;
+    .moon-solid {
+        color: ${props => props.theme.iconColor};
         position: absolute;
-        margin-left: 4px;
-        margin-top: 2px;
-        width: 14px;
-        height: 14px;
+        width: 18px;
+        height: 18px;
         border-radius: 50%;
-        border-top: solid 1px currentColor;
-        border-bottom: solid 1px currentColor;
-        border-left: solid 1px currentColor;
-        border-right: solid 1px transparent;
-    }
-      
-    .moon.icon:before {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: 1px;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    border-top: solid 1px transparent;
-    border-bottom: solid 1px currentColor;
-    border-left: solid 1px currentColor;
-    border-right: solid 1px transparent;
-    }
-      
+        background-color: currentColor;
 
-    .sun.icon {
-        color: #fff;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 1px;
+            width: 12px;
+            color: ${props => props.theme.secondaryColor};
+            background-color: ${props => props.theme.secondaryColor};
+            height: 12px;
+            border-radius: 50%;
+            border-top: solid 1px transparent;
+            border-bottom: solid 1px currentColor;
+            border-left: solid 1px currentColor;
+            border-right: solid 1px transparent;
+            -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg);
+        }
+    }
+
+    .sun {
+        color:${props => props.theme.iconColor};
         position: absolute;
-        margin-left: 7px;
-        margin-top: 7px;
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        border: 2px solid currentColor;
+        border: 1px solid currentColor;
         box-shadow: -8px 0 0 -4px currentColor,
                     8px 0 0 -4px currentColor, 
                     0 -8px 0 -4px currentColor,

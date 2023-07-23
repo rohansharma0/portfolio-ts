@@ -9,11 +9,11 @@ export const StyledMenu = styled.div`
 		border: none;
 		background-color: transparent;
 		z-index: 999;
-		mix-blend-mode: difference;
+		// mix-blend-mode: difference;
 		.menu-bar {
 			width: 2.5rem;
 			height: 1px;
-			background-color: #fff;
+			background-color: ${props => props.theme.iconColor};
 			margin: 4px;
 		}
 	}

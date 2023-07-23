@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 //background images
-import circleRight from "../../static/img/circle-right.svg";
-import circleLeft from "../../static/img/circle-left.svg";
-import line from "../../static/img/line.svg";
+// import circleRight from "../../static/img/circle-right.svg";
+// import circleLeft from "../../static/img/circle-left.svg";
+// import line from "../../static/img/line.svg";
 
 export const StyledHomeHero = styled.div`
 	height: 100vh;
@@ -31,7 +31,7 @@ export const StyledHomeHero = styled.div`
 			height: 52px;
 		}
 		.arrow-down.icon {
-			color: #fff;
+			color: ${props => props.theme.iconColor};;
 			position: absolute;
 			margin-left: 10px;
 			margin-top: 2px;
@@ -73,7 +73,7 @@ export const StyledHomeHero = styled.div`
 
 				&:nth-child(2) span {
 					-webkit-text-stroke-width: 1px;
-					-webkit-text-stroke-color: #fff;
+					-webkit-text-stroke-color: ${props => props.theme.textColor};
 					color: transparent;
 				}
 				span {
@@ -105,7 +105,7 @@ export const StyledHomeHero = styled.div`
 
 	.resume-btn a {
 		margin: 1.5rem 0 0 0;
-		color: #fff;
+		color: ${props => props.theme.textColor};;
 		font-weight: 800;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -132,7 +132,7 @@ export const StyledHomeHero = styled.div`
 			top: 0;
 			width: 100%;
 			height: 1px;
-			background-color: #fff;
+			background-color: ${props => props.theme.textColor};;
 			opacity: 0.2;
 			transition: 0.5s cubic-bezier(0.17, 0.85, 0.438, 0.99);
 		}
@@ -141,9 +141,9 @@ export const StyledHomeHero = styled.div`
 			content: "";
 			position: absolute;
 			right: 0;
-			width: 1px;
+			width: 0.5px;
 			height: 100%;
-			background-color: #fff;
+			background-color: ${props => props.theme.textColor};
 			opacity: 0.2;
 			transition: 0.5s cubic-bezier(0.17, 0.85, 0.438, 0.99);
 		}
@@ -159,7 +159,7 @@ export const StyledHomeHero = styled.div`
 				bottom: 0;
 				width: 100%;
 				height: 1px;
-				background-color: #fff;
+				background-color: ${props => props.theme.textColor};
 				transform: scale(0);
 				transform-origin: right;
 				opacity: 1;
@@ -172,8 +172,7 @@ export const StyledHomeHero = styled.div`
 				left: 0;
 				width: 1px;
 				height: 100%;
-				transform-origin: right;
-				background-color: #fff;
+				background-color: ${props => props.theme.textColor};
 				transform: scale(0);
 				transform-origin: bottom;
 				opacity: 1;
@@ -191,7 +190,7 @@ export const StyledHomeHero = styled.div`
 				top: 0;
 				width: 100%;
 				height: 1px;
-				background-color: #fff;
+				background-color: ${props => props.theme.textColor};
 				transform: scale(0);
 				transform-origin: left;
 				opacity: 1;
@@ -202,9 +201,9 @@ export const StyledHomeHero = styled.div`
 				content: "";
 				position: absolute;
 				right: 0;
-				width: 1px;
+				width: 0.5px;
 				height: 100%;
-				background-color: #fff;
+				background-color: ${props => props.theme.textColor};
 				transform: scale(0);
 				transform-origin: top;
 				opacity: 1;
@@ -221,7 +220,7 @@ export const StyledHomeHero = styled.div`
 				bottom: 0;
 				width: 100%;
 				height: 1px;
-				background-color: #fff;
+				background-color: ${props => props.theme.textColor};
 				opacity: 0.2;
 				transition: 0.5s cubic-bezier(0.17, 0.85, 0.438, 0.99);
 			}
@@ -232,7 +231,7 @@ export const StyledHomeHero = styled.div`
 				left: 0;
 				width: 1px;
 				height: 100%;
-				background-color: #fff;
+				background-color: ${props => props.theme.textColor};
 				opacity: 0.2;
 				transition: 0.5s cubic-bezier(0.17, 0.85, 0.438, 0.99);
 			}

@@ -14,6 +14,7 @@ export const StyledNavBar = styled.div`
 		align-items: center;
 		right: 5.5rem;
 		top: 0;
+		z-index:999;
 		ul{
 			display: none;
 		}
@@ -25,7 +26,7 @@ export const StyledNavBar = styled.div`
 		background-color: transparent;
 		z-index: 999;
 		font-size: 2rem;
-		mix-blend-mode: difference;
+		// mix-blend-mode: difference;
 	}
 
 	@media only screen and (min-width: 600px) {
@@ -45,7 +46,7 @@ export const StyledNavBar = styled.div`
 					margin-left:1rem;
 	
 					a{
-						color:#fff;
+						color: ${props => props.theme.primaryColor};
 						font-size:1.1rem;
 					}
 					

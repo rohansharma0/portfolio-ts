@@ -1,4 +1,3 @@
-import React from "react";
 import Menu from "./Menu";
 import { StyledNavBar } from "./styles/NavBar.styled";
 import ThemeSwitch from "./ThemeSwitch";
@@ -7,7 +6,9 @@ import Logo from "./Logo";
 const NavBar = () => {
     return (
         <StyledNavBar>
-            <div className="logo-container clickableLinkGlow">rohan</div>
+            <div className="logo-container clickableLinkGlow">
+                <Logo />
+            </div>
 
             <div className="hero-nav">
                 <ThemeSwitch />

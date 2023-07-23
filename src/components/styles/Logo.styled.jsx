@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const StyledLogo = styled.div`
 	.logo {
-		fill: #fff;
-		width: 80px;
+		fill: ${props => props.theme.primaryColor};
+		width: 70px;
 		height: auto;
+		
+		path{
+			fill: ${props => props.theme.primaryColor};
+		}
 	}
 	/* Small devices (portrait tablets and large phones, 600px and up) */
 	@media only screen and (min-width: 600px) {
@@ -13,7 +17,7 @@ export const StyledLogo = styled.div`
 	/* Large devices (laptops/desktops, 950px and up) */
 	@media only screen and (min-width: 950px) {
 		.logo {
-			width: 100px;
+			width: 80px;
 		}
 	}
 

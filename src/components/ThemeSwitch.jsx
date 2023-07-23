@@ -1,25 +1,27 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import { StyledThemeSwitch } from './styles/ThemeSwitch.styled'
 import { ThemeContext } from '../providers/ThemeContext'
+import { Theme } from '../models/Theme'
 
 const ThemeSwitch = () => {
-
     const handleSwitch = () => {
-        if (themeContext.theme === "darkTheme") {
-            themeContext.setTheme("lightTheme")
+        if (themeContext.theme === Theme.Dark) {
+            themeContext.setTheme(Theme.Light)
         } else {
-            themeContext.setTheme("darkTheme")
+            themeContext.setTheme(Theme.Dark)
         }
     }
-
     const themeContext = useContext(ThemeContext);
 
     return (
         <StyledThemeSwitch onClick={handleSwitch}>
-            {themeContext.theme === "darkTheme" ? (<div className="sun icon"></div>) : (<div className="moon icon"></div>)}
+            {themeContext.theme === Theme.Dark ? (
+                <div className="sun"></div>
+            ) : (
+                <div className="moon-solid"></div>
+            )}
 
         </StyledThemeSwitch>
-
     )
 }
 
