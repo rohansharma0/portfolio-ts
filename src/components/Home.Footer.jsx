@@ -5,14 +5,14 @@ import { StyledHomeFooter } from "./styles/Home.Footer.styled";
 // import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const HomeFooter = () => {
-    let text1: any = useRef(null);
-    let text2: any = useRef(null);
-    let text3: any = useRef(null);
+    let text1 = useRef(null);
+    let text2 = useRef(null);
+    let text3 = useRef(null);
 
-    let div1: any = useRef(null);
-    let div2: any = useRef(null);
-    let div3: any = useRef(null);
-    let div4: any = useRef(null);
+    let div1 = useRef(null);
+    let div2 = useRef(null);
+    let div3 = useRef(null);
+    let div4 = useRef(null);
 
     // const { scroll } = useLocomotiveScroll();
 
@@ -48,7 +48,7 @@ const HomeFooter = () => {
     // }, []);
 
     return (
-        <StyledHomeFooter id="footer-section">
+        <StyledHomeFooter id="homeFooter">
             <div className="hero-section">
                 <div className="top">
                     <div>
@@ -134,10 +134,9 @@ const HomeFooter = () => {
                 <div className="left">
                     <div className="left-text">
                         <p>made with ❤️ by rohan</p>
-                        <p></p>
                     </div>
                     <p>
-                        <span>©️</span> 2023 rohansharma.co
+                        <span>©</span> 2023 rohansharma.co
                     </p>
                 </div>
                 <div

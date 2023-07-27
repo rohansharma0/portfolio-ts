@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin();
+gsap.registerPlugin(ScrollTrigger);
 //Navigation Animations
 
 export const staggerReaveal = (node1: any, node2: any) => {

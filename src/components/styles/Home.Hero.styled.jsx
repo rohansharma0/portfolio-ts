@@ -1,18 +1,11 @@
 import styled from "styled-components";
-
-//background images
-import circleRight from "../../static/img/circle-right.svg";
-import circleLeft from "../../static/img/circle-left.svg";
-import line from "../../static/img/line.svg";
-
 export const StyledHomeHero = styled.div`
-	height: 100vh;
+	height: 70vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	background: transparent;
 	align-items: center;
-	padding: 15vh 0;
 
 	.footer {
 		height: 15vh;
@@ -141,7 +134,7 @@ export const StyledHomeHero = styled.div`
 			content: "";
 			position: absolute;
 			right: 0;
-			width: 0.5px;
+			width: 1px;
 			height: 100%;
 			background-color: ${props => props.theme.textColor};
 			opacity: 0.2;
@@ -201,7 +194,7 @@ export const StyledHomeHero = styled.div`
 				content: "";
 				position: absolute;
 				right: 0;
-				width: 0.5px;
+				width: 1px;
 				height: 100%;
 				background-color: ${props => props.theme.textColor};
 				transform: scale(0);

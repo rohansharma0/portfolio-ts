@@ -1,15 +1,17 @@
 import { useEffect, useMemo, useState } from 'react'
-import { RouterProvider } from 'react-router-dom'
 import Background from './pages/Background';
 import GlobalStyles from './components/styles/Global';
-import { LoadingPage } from './pages/LoadingPage';
 import NavBar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
-import { Routes } from './Routes';
 
 import { Properties } from "./helper/Constants";
 import { ThemeContext } from './providers/ThemeContext';
 import { Theme } from './models/Theme';
+import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Router from './Router';
 
 
 const App = () => {
@@ -48,22 +50,26 @@ const App = () => {
     }
     const themeMemo = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
+
     return (
-        <ThemeContext.Provider value={themeMemo}>
-            <ThemeProvider theme={getTheme}>
-                <GlobalStyles />
-                <Background />
-                <>
-                    <NavBar />
-                    <RouterProvider router={Routes} />
-                </>
-                {/* {preloader ? (
+        <BrowserRouter basename="/">
+            <ThemeContext.Provider value={themeMemo}>
+                <ThemeProvider theme={getTheme}>
+                    <GlobalStyles />
+                    <Background />
+                    <>
+                        <NavBar />
+                        <Router />
+                    </>
+                    {/* {preloader ? (
                 <LoadingPage />
             ) : (
                 
             )} */}
-            </ThemeProvider>
-        </ThemeContext.Provider>
+                </ThemeProvider>
+            </ThemeContext.Provider>
+        </BrowserRouter>
+
 
     )
 }

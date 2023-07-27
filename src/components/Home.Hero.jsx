@@ -8,12 +8,12 @@ import Resume from "../static/files/RohanSharma.pdf";
 import { StyledHomeHero } from "./styles/Home.Hero.styled";
 
 const HomeHero = () => {
-    let text1: any = useRef(null);
-    let text2: any = useRef(null);
-    let text3: any = useRef(null);
-    let text4: any = useRef(null);
-    let resumeBtn: any = useRef(null);
-    let scrollBtn: any = useRef(null);
+    let text1 = useRef(null);
+    let text2 = useRef(null);
+    let text3 = useRef(null);
+    let text4 = useRef(null);
+    let resumeBtn = useRef(null);
+    let scrollBtn = useRef(null);
     // const { scroll } = useLocomotiveScroll();
 
     let projectSectionPosotion = document.getElementById("project-section");

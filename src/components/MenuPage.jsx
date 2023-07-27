@@ -141,34 +141,34 @@ const MenuPage = ({ isActive }) => {
                 <div className="menu-links">
                     <ul>
                         <li className="nav-link showHide clickableLinkGlow">
-                            <a
+                            <Link
                                 // onMouseEnter={(e) => handleHover(e)}
                                 // onMouseOut={(e) => handleHoverExit(e)}
                                 ref={(el) => (line1 = el)}
-                                href="/"
+                                to="/"
                             >
                                 <span data-text="Home.">Home.</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link showHide clickableLinkGlow">
-                            <a
+                            <Link
                                 // onMouseEnter={(e) => handleHover(e)}
                                 // onMouseOut={(e) => handleHoverExit(e)}
                                 ref={(el) => (line2 = el)}
-                                href="about"
+                                to="/about"
                             >
                                 <span data-text="About.">About.</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-link showHide clickableLinkGlow">
-                            <a
+                            <Link
                                 // onMouseEnter={(e) => handleHover(e)}
                                 // onMouseOut={(e) => handleHoverExit(e)}
                                 ref={(el) => (line3 = el)}
-                                href="contact"
+                                to="/contact"
                             >
                                 <span data-text="Contact.">Contact.</span>
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </div>
@@ -183,7 +183,7 @@ const MenuPage = ({ isActive }) => {
                         <p className="rolling-text">instagram</p>
                     </a>
                     <a
-                        href="https://www.linkedin.com/in/rohan-sharma-bb34b1188"
+                        href="https://www.linkedin.com/in/iamrohan29"
                         target="_blank"
                         className="clickableLinkShrink"
                     >
@@ -199,7 +199,7 @@ const MenuPage = ({ isActive }) => {
                 </div>
                 <div className="copyright showHide">
                     <p>
-                        <span>©️</span> 2023{" "}
+                        <span>©</span> 2023{" "}
                         {width >= 1200 ? "rohansharma.co" : ""}
                     </p>
                 </div>

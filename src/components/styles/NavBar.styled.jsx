@@ -5,7 +5,6 @@ export const StyledNavBar = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
-	position: absolute;
 
 	.hero-nav {
 		display: flex;
