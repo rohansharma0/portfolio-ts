@@ -5,13 +5,15 @@ export const StyledHeader = styled.header`
     top: 0;
     left: 0;
     right: 0;
+    z-index:1;
     padding: 1.25rem;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(180deg, rgb(0 0 0 / 35%) 0%, rgba(255,255,255,0) 100%);
-
+    background: linear-gradient(180deg, ${props => props.theme.secondaryColor} 0%, rgba(255,255,255,0) 100%);
+    
     @media only screen and (min-width: 600px) {
-	}
+        padding: 2.5rem;
+    }
 
     @media only screen and (min-width: 950px) {
 	}

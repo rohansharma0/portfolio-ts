@@ -1,4 +1,3 @@
-import React from 'react'
 import { StyledLoadingScreen } from '../components/styles/LoadingScreen.styled'
 
 export const LoadingPage = () => {

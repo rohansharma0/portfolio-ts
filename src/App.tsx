@@ -1,17 +1,16 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, useRef } from 'react'
 import Background from './pages/Background';
 import GlobalStyles from './components/styles/Global';
-import NavBar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
 
 import { Properties } from "./helper/Constants";
 import { ThemeContext } from './providers/ThemeContext';
 import { Theme } from './models/Theme';
 import { BrowserRouter, RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
 import Router from './Router';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
 
 
 const App = () => {
@@ -50,21 +49,43 @@ const App = () => {
     }
     const themeMemo = useMemo(() => ({ theme, setTheme }), [theme, setTheme]);
 
+    //locomotive scroll
+    const containerRef = useRef(null)
 
     return (
         <BrowserRouter basename="/">
             <ThemeContext.Provider value={themeMemo}>
                 <ThemeProvider theme={getTheme}>
-                    <GlobalStyles />
-                    <Background />
-                    <>
-                        <Router />
-                    </>
-                    {/* {preloader ? (
+                    <LocomotiveScrollProvider
+                        options={
+                            {
+                                smooth: true,
+                                // ... all available Locomotive Scroll instance options 
+                            }
+                        }
+                        watch={
+                            [
+                                //..all the dependencies you want to watch to update the scroll.
+                                //  Basicaly, you would want to watch page/location changes
+                                //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+                            ]
+                        }
+                        containerRef={containerRef}
+                    >
+                        <GlobalStyles />
+                        <Background />
+                        <main data-scroll-container ref={containerRef}>
+                            <Header />
+                            <Router />
+                            <Footer />
+                        </main>
+
+                        {/* {preloader ? (
                 <LoadingPage />
             ) : (
                 
             )} */}
+                    </LocomotiveScrollProvider>
                 </ThemeProvider>
             </ThemeContext.Provider>
         </BrowserRouter>

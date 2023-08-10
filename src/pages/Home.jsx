@@ -1,19 +1,14 @@
-import React from 'react'
-import HomeHero from '../components/Home.Hero'
+import Hero from '../components/Hero'
+import Project from '../components/Project'
 import HomeFooter from '../components/Home.Footer'
-import { StyledHome } from '../components/styles/Home.styled'
-import NavBar from '../components/Navbar'
 
 const Home = () => {
     return (
-        <>
-            <NavBar />
-            <StyledHome>
-                <HomeHero />
-                <HomeFooter />
-            </StyledHome>
-        </>
-
+        <main data-scroll-section>
+            <Hero />
+            <Project />
+            <HomeFooter />
+        </main>
     )
 }
 

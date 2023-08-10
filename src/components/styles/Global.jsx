@@ -1,10 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import KrylonFont from "../../static/fonts/Krylon-Regular.otf";
-import ITCAvantGardeStdXLt from "../../static/fonts/ITCAvantGardeStd-XLt.otf"; // 100
-import ITCAvantGardeStdBk from "../../static/fonts/ITCAvantGardeStd-Bk.otf"; // 200
-import ITCAvantGardeStdMd from "../../static/fonts/ITCAvantGardeStd-Md.otf"; // 400
-import ITCAvantGardeStdDemi from "../../static/fonts/ITCAvantGardeStd-Demi.otf"; // 600
-import ITCAvantGardeStdBold from "../../static/fonts/ITCAvantGardeStd-Bold.otf"; // 800
+
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 const GlobalStyles = createGlobalStyle`
 
@@ -15,39 +12,11 @@ const GlobalStyles = createGlobalStyle`
 		src: url(${KrylonFont}) format("opentype");
 		font-weight: 400;
 	}
-    @font-face {
-		font-family: "Avant Garde";
-		src: url(${ITCAvantGardeStdXLt}) format("opentype");
-		font-weight: 100;
-	}
-
-    @font-face {
-		font-family: "Avant Garde";
-		src: url(${ITCAvantGardeStdBk}) format("opentype");
-		font-weight: 200;
-	}
-
-    @font-face {
-		font-family: "Avant Garde";
-		src: url(${ITCAvantGardeStdMd}) format("opentype");
-		font-weight: 400;
-	}
-    @font-face {
-		font-family: "Avant Garde";
-		src: url(${ITCAvantGardeStdDemi}) format("opentype");
-		font-weight: 600;
-	}
-    @font-face {
-		font-family: "Avant Garde";
-		src: url(${ITCAvantGardeStdBold}) format("opentype");
-		font-weight: 800;
-	}
     * {
         margin: 0;
         padding: 0;
-        font-family: 'Avant Garde', sans-serif;
+        font-family: 'Krylon', sans-serif;
         box-sizing: border-box;
-        
         // cursor: none !important;
     }
 
@@ -62,9 +31,6 @@ const GlobalStyles = createGlobalStyle`
         color: ${props => props.theme.textColor};
         transition: none;
     }
-
-
-
 `;
 
 export default GlobalStyles;

@@ -48,7 +48,7 @@ const HomeFooter = () => {
     // }, []);
 
     return (
-        <StyledHomeFooter id="homeFooter">
+        <StyledHomeFooter id="contact">
             <div className="hero-section">
                 <div className="top">
                     <div>
@@ -138,12 +138,6 @@ const HomeFooter = () => {
                     <p>
                         <span>©</span> 2023 rohansharma.co
                     </p>
-                </div>
-                <div
-                    className="footer-arrow clickableLinkGlow"
-                // onClick={() => scroll.scrollTo(0)}
-                >
-                    <div className="arrow-down icon"></div>
                 </div>
             </div>
         </StyledHomeFooter>

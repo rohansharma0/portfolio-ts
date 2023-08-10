@@ -1,6 +1,8 @@
 import React from 'react'
 import { StyledFooter } from './styles/Footer.styled'
-import InstaSVG from "../../static/img/instagram-v2.svg";
+import InstaSVG from "../static/img/instagram-v2.svg";
+import ThemeSwitch from './ThemeSwitch';
+
 const Footer = () => {
     return (
         <StyledFooter>
@@ -19,6 +21,7 @@ const Footer = () => {
             </nav>
 
             <div className='scroll-progress'>
+                <ThemeSwitch />
             </div>
         </StyledFooter>
     )

@@ -1,18 +1,20 @@
 import styled from "styled-components";
 
-export const StyledHomeFooter = styled.div`
-	height: 100vh;
+export const StyledHomeFooter = styled.section`
+
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: transparent;
+	margin: 1.25rem;
+	height: 90vh;
+    padding: 2rem 0 2rem 0;
 
 	.hero-section {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		flex-grow: 1;
-		padding-top: 15vh;
 		.top {
 			p {
 				font-size: 1.5rem;
@@ -48,7 +50,7 @@ export const StyledHomeFooter = styled.div`
 		height: 15vh;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: flex-end;
 		align-items: flex-start;
 
 		.footer-arrow {
@@ -185,6 +187,9 @@ export const StyledHomeFooter = styled.div`
 	}
 	/* Small devices (portrait tablets and large phones, 600px and up) */
 	@media only screen and (min-width: 600px) {
+		
+		margin: 2.5rem;
+
 		.hero-section {
 			.top {
 				p {
@@ -223,13 +228,10 @@ export const StyledHomeFooter = styled.div`
 		}
 	}
 
-	/* Large devices (laptops/desktops, 950px and up) */
-	@media only screen and (min-width: 950px) {
-		
-	}
 
 	/* Extra large devices (large laptops and desktops, 1200px and up) */
-	@media only screen and (min-width: 1200px) {
+	@media only screen and (min-width: 800px) {
+		margin: 0 17rem;
 		.hero-section {
 			.top {
 				p {

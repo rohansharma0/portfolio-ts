@@ -5,7 +5,7 @@ import { StyledLogo } from "./styles/Logo.styled"
 const Logo = () => {
     return (
         <StyledLogo>
-            <Link to="/v2">
+            <Link to="/">
                 <svg
                     width="432"
                     height="111"
