@@ -26,3 +26,7 @@ export const Properties: any = {
         footerBackgroundColor: "#fff",
     }
 }
+
+const header = {
+    top: "1.25rem"
+}   

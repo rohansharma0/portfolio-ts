@@ -1,6 +1,12 @@
+import NavBar from "../components/Navbar"
+
 const Contact = () => {
     return (
-        <div>Contact</div>
+        <>
+            <NavBar />
+            <div>Contact</div>
+        </>
+
     )
 }
 

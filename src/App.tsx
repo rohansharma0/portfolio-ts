@@ -58,7 +58,6 @@ const App = () => {
                     <GlobalStyles />
                     <Background />
                     <>
-                        <NavBar />
                         <Router />
                     </>
                     {/* {preloader ? (

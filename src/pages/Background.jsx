@@ -10,8 +10,6 @@ const Background = () => {
 
     useEffect(() => {
         changeBackgroundColorAnimation();
-        console.log(themeContext);
-
     })
 
     const changeBackgroundColorAnimation = () => {

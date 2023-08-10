@@ -2,13 +2,18 @@ import React from 'react'
 import HomeHero from '../components/Home.Hero'
 import HomeFooter from '../components/Home.Footer'
 import { StyledHome } from '../components/styles/Home.styled'
+import NavBar from '../components/Navbar'
 
 const Home = () => {
     return (
-        <StyledHome>
-            <HomeHero />
-            <HomeFooter />
-        </StyledHome>
+        <>
+            <NavBar />
+            <StyledHome>
+                <HomeHero />
+                <HomeFooter />
+            </StyledHome>
+        </>
+
     )
 }
 
